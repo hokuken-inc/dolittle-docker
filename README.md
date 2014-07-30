@@ -19,49 +19,35 @@ Please change below `yourpassword`
 
 `root:yourpassword`
 
-3) build docker image
+3) build docker image and tag image
 
-```
+```bash
 $ cd dolittle-docker
-$ docker build .
+$ docker build -t TAG_NAME .
 ```
 
-
-### Tag
-
-Check images
-
-```
-$ docker images
-```
-
-And tag image.
-
-```
-$ docker tag CONTAINER_ID TAG_NAME
-```
 
 ## Run container
 
 Run with connecting web and ssh ports.
-```
+```bash
 $ docker run -d -p 4000:80 -p 2022:22 TAG_NAME
 ```
 
 ## Access server to a container (boot2docker)
 
 Check host ip-address
-```
+```bash
 $ boot2docker ip
 ```
 
 Access web server
-```
+```bash
 $ curl http://IP_ADDRESS:4000/
 ```
 
 Connect SSH
-```
+```bash
 $ ssh IP_ADDRESS -p 2022
 ```
 
