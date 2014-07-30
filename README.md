@@ -16,6 +16,7 @@ $ vi Dockerfile
 ```
 
 Please change below `yourpassword`
+
 `root:yourpassword`
 
 3) build docker image
